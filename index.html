@@ -33,11 +33,19 @@
             <div class="col-7 ml-3">
                 <div class="row">
                     <div class="col border mb-3 mt-3"> 
-                        <h4>CITY INFO [PLACEHOLDER]</h4>
-                        <span class="row p-2">Temperature: </span>
-                        <span class="row p-2">Humidity: </span>
-                        <span class="row p-2">Wind Speed: </span>
-                        <span class="row p-2 pb-4">UV Index: </span>
+                        <h4 id="city-name" class="text-center">CITY INFO [PLACEHOLDER]</h4>
+                        <span class="row p-2">Temperature: 
+                            <span id="city-temp" class="pl-2"></span>
+                        </span>
+                        <span class="row p-2">Humidity:  
+                            <span id="city-humidity" class="pl-2"></span>
+                        </span>
+                        <span class="row p-2">Wind Speed: 
+                            <span id="city-wind" class="pl-2"></span>
+                        </span>
+                        <span class="row p-2 pb-4">UV Index: 
+                            <span id="city-uv" class="pl-2"></span>
+                        </span>
                     </div>
                 </div>
                 <div class="row">
@@ -101,20 +109,41 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        var baseQueryURL = "https:/api.openweathermap.org/data/2.5/weather?q="
+        var APIKey = "&appid=33d063d87c90e6bcb0c27fdb6e80f566"
+
+        function displayCityInfo(city) {
+            var queryURL = baseQueryURL + city + APIKey;
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function(response) {
+                $("#city-name").text(city);
+                $("#city-temp").text(response.main.temp);
+                $("#city-humidity").text(response.main.humidity);
+                $("#city-wind").text(response.wind.speed + " MPH");
+            });
+        }
 
         $("#search-button").on("click", function() {
             event.preventDefault();
             var newSearch = $("<li>")
             newSearch.addClass("list-group-item")
             $(".search-history").prepend(newSearch.text($("#user-search").val()))
+            displayCityInfo($("#user-search").val())
         })
+
+        $(document).on("click", ".list-group-item", function() {
+            console.log("FUG");
+            displayCityInfo($(this).text())
+        });
 
     </script>
 </body>
