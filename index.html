@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,37 +15,109 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid flex-grow">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center bg-dark text-white">
                 <h1>Weather Dashboard</h1>
             </div>   
         </div>
         <div class="row">
-            <div class="col-4 bg-light">
+            <div class="col-4 bg-light pt-1">
                 <h6>Search for a city: </h6> 
                 <form>
                     <input type="text" placeholder="Search.." name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                   </form>
+                  <ul class="list-group pt-3 pb-3">
+                    <li class="list-group-item">Austin</li>
+                    <li class="list-group-item">Chicago</li>
+                    <li class="list-group-item">New York</li>
+                    <li class="list-group-item">Orlando</li>
+                    <li class="list-group-item">San Francisco</li>
+                    <li class="list-group-item">Seattle</li>
+                    <li class="list-group-item">Denver</li>
+                    <li class="list-group-item">Atlanta</li>
+                  </ul>
             </div>
-            <div class="col-8">
+            <div class="col-7 ml-3">
                 <div class="row">
-                    <div class="col border"> 
+                    <div class="col border mb-3 mt-3"> 
                         <h4>CITY INFO [PLACEHOLDER]</h4>
-                        <span class="row">Temperature: </span>
-                        <span class="row">Humidity: </span>
-                        <span class="row">Wind Speed: </span>
-                        <span class="row">UV Index: </span>
+                        <span class="row p-2">Temperature: </span>
+                        <span class="row p-2">Humidity: </span>
+                        <span class="row p-2">Wind Speed: </span>
+                        <span class="row p-2 pb-4">UV Index: </span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col"> 
-                        <h5>5-Day Forecast</h5>
+                        <h4>5-Day Forecast</h4>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5>8/16/2019</h5>
+                                <img src="https://cdn3.iconfinder.com/data/icons/climate-iconset/40/Cloudy-512.png" width="38" height="25" alt="Cloud" class="mt-3 mb-3">
+                                <br>
+                                <p>Temp: 86.84 F</p>
+                                <p>Humidity: 43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5>8/16/2019</h5>
+                                <img src="https://cdn3.iconfinder.com/data/icons/climate-iconset/40/Cloudy-512.png" width="38" height="25" alt="Cloud" class="mt-3 mb-3">
+                                <br>
+                                <p>Temp: 86.84 F</p>
+                                <p>Humidity: 43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5>8/16/2019</h5>
+                                <img src="https://cdn3.iconfinder.com/data/icons/climate-iconset/40/Cloudy-512.png" width="38" height="25" alt="Cloud" class="mt-3 mb-3">
+                                <br>
+                                <p>Temp: 86.84 F</p>
+                                <p>Humidity: 43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5>8/16/2019</h5>
+                                <img src="https://cdn3.iconfinder.com/data/icons/climate-iconset/40/Cloudy-512.png" width="38" height="25" alt="Cloud" class="mt-3 mb-3">
+                                <br>
+                                <p>Temp: 86.84 F</p>
+                                <p>Humidity: 43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5>8/16/2019</h5>
+                                <img src="https://cdn3.iconfinder.com/data/icons/climate-iconset/40/Cloudy-512.png" width="38" height="25" alt="Cloud" class="mt-3 mb-3">
+                                <br>
+                                <p>Temp: 86.84 F</p>
+                                <p>Humidity: 43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+    </script>
 </body>
 </html>
